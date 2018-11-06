@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What can i do with this</title>
+
+	<% include ../partials/head %>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+	<% include ../partials/header %>
+<!-- app_id = 2d78a357 -->
+<!-- api key 60d10df220acc4120e96411b7758e5ab -->
+	<div class="jumbotron">
+		<h1>What can i make with this?</h1>
+		<p>List the ingredients that you have</p>
+	</div>
+	<form autocomplete="off" action="/result" method="POST">
+		<div class="autocomplete" style="width:300px;">
+			<input id='myInput' type="text" placeholder="Search for ingredients" name="search" >
+		</div>
+		<br>
+		<button class='btn btn-primary' type= "submit">Search</button>
+
+	</form>
+	
+	<% include ../partials/footer %>
+</body>
+</html>
