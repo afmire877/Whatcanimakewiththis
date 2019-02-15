@@ -1,0 +1,16 @@
+h1 {
+	text-align: center;
+	padding: 20px 10px;
+}
+
+
+
+.card {
+	margin-bottom: 10px;
+	/*background-color: yellow;*/
+}
+
+img[class="card"]{
+	margin: 0 auto;
+	display: block;
+}

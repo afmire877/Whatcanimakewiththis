@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Results:  <%= data.criteria.q  %> </title>
+	<title>Results:  <%= data.q  %> </title>
 	<% include ../partials/head %>
+	<link rel="stylesheet" type="text/css" href="result.css">
 </head>
 <body>
 	<% include ../partials/header %>
-	<h1>Results: <%= data.criteria.q  %> </h1>
+	<h1>Results: <%= data.q  %> </h1>
 	<div class="container">
 		<div class="row">
-		<%  for(var i = 0;i <= data.matches.length -1 ;i++){ %>
-	    <div class="col-sm">
+		<%  for(var i = 0;i <= data.hits.length -1 ;i++){ %>
+	    <div class="col-sm-6 col-md-4  ">
 	    	<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="<%= data.matches[i].imageUrlsBySize[90] %>" alt="Card image cap">
+			  <img class="card-img-top img-fluid thumbnail" src="<%= data.hits[i].recipe.image %>" alt="Card image cap">
 			  <div class="card-body">
-			    <h5 class="card-title"><%= data.matches[i].recipeName %></h5>
-			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			    <a href="#" class="btn btn-primary">Go somewhere</a>
+			    <h5 class="card-title"><%= data.hits[i].recipe.label %></h5>
+			    <h6 class="card-subtitle mb-2 text-muted">No. of serving: <%= data.hits[i].recipe.yield %></h6>
+				<p class="card-text"><%= data.hits[i].recipe.dietLabels[0] %></p>		
+			    <a href="#" class="btn btn-primary">More info</a>
 			  </div>
 			</div>
 	    </div>
-	  	<% };%>
+	  	<% } %>
 	  </div>
 
 	</div>

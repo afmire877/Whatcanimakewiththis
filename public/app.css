@@ -1,5 +1,17 @@
 
 
+
+h1,
+p,
+li {
+	text-align: center;
+
+}
+
+
+li {
+	list-style: none;
+}
 form , 
 .autocomplete {
 	text-align: center;

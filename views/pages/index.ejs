@@ -14,15 +14,24 @@
 		<h1>What can i make with this?</h1>
 		<p>List the ingredients that you have</p>
 	</div>
-	<form autocomplete="off" action="/result" method="POST">
+	<form id='searchForm' autocomplete="off" action="/result" method="POST">
 		<div class="autocomplete" style="width:300px;">
 			<input id='myInput' type="text" placeholder="Search for ingredients" name="search" >
 		</div>
 		<br>
 		<button class='btn btn-primary' type= "submit">Search</button>
+		<button class="btn btn-danger">clear</button>
 
 	</form>
+	<div class="ingredients">
+		<p>Ingredients Selected :</p>
+		<ul>
+			
+		</ul>
+	</div>
 	
 	<% include ../partials/footer %>
+	<script type="text/javascript" src="index.js"></script>
+	
 </body>
 </html>
