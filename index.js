@@ -16,6 +16,7 @@ const express    = require('express'),
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static('public'));
+app.set('port' ,process.env.PORT || 5000)
 
 // intiallizing AJAX  
 // var ajax = new XMLHttpRequest();
@@ -23,7 +24,7 @@ app.use(express.static('public'));
 
 
 //  connnection to DB
-mongoose.connect('mongodb://localhost/recipe_app' );
+mongoose.connect('mongodb://localhost/recipe_app',{ useNewUrlParser: true } );
 
 
 // Schema 
@@ -77,5 +78,5 @@ app.get('/recipe/')
 
 
 
-app.listen(5000);
-console.log('5000 is the magic port')
+app.listen(process.env.PORT);
+console.log('Server Started')
