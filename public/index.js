@@ -3,6 +3,8 @@ const form = document.querySelector('#searchForm')
 const submitBtn = document.querySelector('button[type="submit"]');
 const list = document.querySelector('div.ingredients ul');
 let ingredients = [];
+
+
 // functions
 
 function addToArray(e){
