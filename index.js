@@ -1,7 +1,6 @@
 const express    = require('express'),
 	  app        = express(),
 	  bodyParser = require('body-parser'),
-	  mongoose   = require('mongoose'),
 	  fs         = require('fs'),
 	  fetch      = require('node-fetch'),
 	  request    = require('request');
@@ -17,28 +16,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static('public'));
 app.set('port' ,process.env.PORT || 5000)
-
-// intiallizing AJAX  
-// var ajax = new XMLHttpRequest();
-
-
-
-//  connnection to DB
-mongoose.connect('mongodb://localhost/recipe_app',{ useNewUrlParser: true } );
-
-
-// Schema 
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
-
-const ingredientSchema = new Schema({
-	name: String
-})
-
-// Model
-
-const ingredient = mongoose.model('ingredient', ingredientSchema);
- 
 
 // ROUTES 
 
