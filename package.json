@@ -16,7 +16,7 @@
     "jquery": "^3.3.1",
     "jsdom": "^13.2.0",
     "mongoose": "^5.3.8",
-    "node-fetch": "^2.2.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^1.18.5",
     "request": "^2.88.0"
   },
